@@ -24,7 +24,6 @@ int main(void)
 				}
 			}
 		}
-//		fprintf(file,"%d,%d\n",b,count);
 		count=0;
 		printf("\r%d/%d",b,a);
 	}
@@ -36,15 +35,15 @@ int main(void)
 
 int issosuu(int data)
 {
-	int a,b;
+	int a;
 	if(data<2){
 		return 0;
 	}
-	for(b=2;b<=data;b++){
-		if(b==data){
+	for(a=2;a<=data;a++){
+		if(a==data){
 			return 1;
 		}
-		if(!(((float)data/(float)b)-(int)((float)data/(float)b))){
+		if(!(((float)data/(float)a)-(int)((float)data/(float)a))){
 			return 0;
 		}
 	}

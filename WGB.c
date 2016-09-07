@@ -15,7 +15,6 @@ int main(void)
 		for(c=0;c<b;c++){
 			for(d=0;d<=b-c;d++){
 				if(issosuu(c)&&issosuu(d)&&issosuu(b-c-d)){
-//					fprintf(file,"a=%d,b=%d,c=%d,d=%d,count=%d\n",a,b,c,d,count);
 					count++;
 				}
 			}
@@ -32,15 +31,15 @@ int main(void)
 
 int issosuu(int data)
 {
-	int a,b;
+	int a;
 	if(data<2){
 		return 0;
 	}
-	for(b=2;b<=data;b++){
-		if(b==data){
+	for(a=2;a<=data;a++){
+		if(a==data){
 			return 1;
 		}
-		if(!(((float)data/(float)b)-(int)((float)data/(float)b))){
+		if(!(((float)data/(float)a)-(int)((float)data/(float)a))){
 			return 0;
 		}
 	}
