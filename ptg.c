@@ -26,11 +26,11 @@ int main(void)
 
 int sks(int a,int b,int c)
 {
-	int ret,div;
+	int div;
 	for(div=1;div<=a;div++){
-		if((!((float)a/(float)div-(int)((float)a/(float)div))) && (!((float)b/(float)div-(int)((float)b/(float)div))) && (!((float)c/(float)div-(int)((float)c/(float)div)))){
-			ret=div;
+		if((!((float)a/(float)div-(int)((float)a/(float)div))) && (!((float)b/(float)div-(int)((float)b/(float)div))) && (!((float)c/(float)div-(int)((float)c/(float)div))) && (div!=1)){
+			return 0;
 		}
 	}
-	return ret;
+	return 1;
 }
